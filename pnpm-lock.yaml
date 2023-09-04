@@ -8,6 +8,12 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.0.0
     version: 5.0.0(astro@3.0.3)(tailwindcss@3.3.3)
+  '@fontsource-variable/fraunces':
+    specifier: ^5.0.9
+    version: 5.0.9
+  '@fontsource/barlow':
+    specifier: ^5.0.8
+    version: 5.0.8
   astro:
     specifier: ^3.0.3
     version: 3.0.3
@@ -770,6 +776,14 @@ packages:
     resolution: {integrity: sha512-ZSjtmelB7IJfWD2Fvb7+Z+ChTIKWq6kjda95fLcQKNS5aheVHn4IkfgRQE3sIIzTcSLwLcLZUD9UBt+V7+h+Pw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@fontsource-variable/fraunces@5.0.9:
+    resolution: {integrity: sha512-kOnLHTau+UM8c10rZGjA01SX096TnWlE+33GiMl165OtfOvuewl5+pui8pKdyy2asb5eMuvA3RCeyaMIwjs4tA==}
+    dev: false
+
+  /@fontsource/barlow@5.0.8:
+    resolution: {integrity: sha512-RMUw8YyoNG3o1rwMnfyyWqYuR7k6H48yYZwpCsgY0x7jeaRdp/FdyG6lPLD5P403kDyqauewldk+VDPhQ65+4w==}
+    dev: false
 
   /@humanwhocodes/config-array@0.11.11:
     resolution: {integrity: sha512-N2brEuAadi0CcdeMXUkhbZB84eskAc8MEX1By6qEchoVywSgXPIjou4rYsl0V3Hj0ZnuGycGCjdNgockbzeWNA==}

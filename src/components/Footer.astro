@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets'
+
+import facebook from '../assets/shared/desktop/icon-facebook.svg'
+import instagram from '../assets/shared/desktop/icon-instagram.svg'
+import twitter from '../assets/shared/desktop/icon-twitter.svg'
+import logo from '../assets/shared/desktop/logo-light.svg'
+---
+
+<footer class="container mx-auto w-full px-6 md:px-10 lg:px-0">
+  <div
+    class="mb-[72px] mt-[120px] bg-dark-grey-blue flex flex-col lg:flex-row gap-12 items-center py-[54px] lg:px-[85px] lg:gap-[102px]"
+  >
+    <Image src={logo} alt="logo" class="w-[217px] h-[24px] md:w-[236px] md:h-[26px]" />
+    <nav class="lg:flex-1">
+      <ul
+        class="flex flex-col md:flex-row uppercase font-bold text-xs 2xl:text-sm items-center gap-6 md:gap-8"
+      >
+        <li>
+          <a href="/" class="text-grey transition-colors duration-300 hover:text-light-cream"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a href="/about" class="text-grey transition-colors duration-300 hover:text-light-cream"
+            >About us</a
+          >
+        </li>
+        <li>
+          <a
+            href="/subscribe"
+            class="text-grey transition-colors duration-300 hover:text-light-cream"
+            >Create your plan</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <ul class="flex gap-6 items-center">
+      <li>
+        <Image src={facebook} alt="" />
+      </li>
+      <li>
+        <Image src={twitter} alt="" />
+      </li>
+      <li>
+        <Image src={instagram} alt="" />
+      </li>
+    </ul>
+  </div>
+</footer>

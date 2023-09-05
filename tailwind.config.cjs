@@ -21,7 +21,7 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function ({ theme, addBase, addUtilities }) {
+    plugin(function({ theme, addBase, addUtilities }) {
       addBase({
         button: {
           width: '217px',
@@ -84,7 +84,7 @@ module.exports = {
       addUtilities({
         '.grid-stack': {
           display: 'grid',
-          'grid-template-areas': 'stack',
+          'grid-template-areas': "'stack'",
         },
         '.grid-stack > *': {
           'grid-area': 'stack',

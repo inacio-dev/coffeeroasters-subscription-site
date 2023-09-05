@@ -1,0 +1,30 @@
+---
+import { getImage } from 'astro:assets'
+
+import heroDesktop from '../../assets/home/desktop/image-hero-coffeepress.jpg'
+import heroMobile from '../../assets/home/mobile/image-hero-coffeepress.jpg'
+import heroTablet from '../../assets/home/tablet/image-hero-coffeepress.jpg'
+
+const heroMobileOpt = await getImage({ src: heroMobile })
+const heroTabletOpt = await getImage({ src: heroTablet })
+const heroDesktopOpt = await getImage({ src: heroDesktop })
+---
+
+<div class="grid-stack rounded-[10px] overflow-hidden">
+  <picture>
+    <source media="(max-width: 767px)" srcset={heroMobileOpt.src} />
+    <source media="(min-width: 1100px)" srcset={heroDesktopOpt.src} />
+    <source media="(min-width: 768px)" srcset={heroTabletOpt.src} />
+    <img src={heroDesktopOpt.src} alt="" {...heroDesktopOpt.attributes} />
+  </picture>
+  <div
+    class="flex flex-col justify-center items-center md:items-start text-center md:text-left md:pl-[58px]"
+  >
+    <h1 class="heading-2 lg:heading-1 text-light-cream max-w-[12ch]">Great coffee made simple.</h1>
+    <p class="text-light-cream opacity-80 mt-6 mb-10 lg:mb-14 max-w-[49ch]">
+      Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees
+      from our best roasters delivered directly to your door, at your schedule.
+    </p>
+    <button class="transition-colors">Create your plan</button>
+  </div>
+</div>

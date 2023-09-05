@@ -20,32 +20,8 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function ({ theme, addBase }) {
+    plugin(function ({ theme, addBase, addUtilities }) {
       addBase({
-        h1: {
-          fontFamily: theme('fontFamily.heading'),
-          fontSize: '4.5rem',
-          lineHeight: '4.5rem',
-          fontWeight: '900',
-        },
-        h2: {
-          fontFamily: theme('fontFamily.heading'),
-          fontSize: '2.5rem',
-          lineHeight: '3rem',
-          fontWeight: '900',
-        },
-        h3: {
-          fontFamily: theme('fontFamily.heading'),
-          fontSize: '2rem',
-          lineHeight: '2.25rem',
-          fontWeight: '900',
-        },
-        h4: {
-          fontFamily: theme('fontFamily.heading'),
-          fontSize: '1.5rem',
-          lineHeight: '2rem',
-          fontWeight: '900',
-        },
         button: {
           width: '217px',
           height: '56px',
@@ -55,12 +31,62 @@ module.exports = {
           display: 'inline-flex',
           justifyContent: 'center',
           alignItems: 'center',
+          fontFamily: theme('fontFamily.heading'),
+          fontWeight: '900',
+          fontSize: theme('fontSize.lg'),
           '&:hover': {
             backgroundColor: '#66D2CF',
           },
           '&:disabled': {
             backgroundColor: '#E2DEDB',
           },
+        },
+      })
+      addUtilities({
+        '.heading-title': {
+          fontFamily: theme('fontFamily.heading'),
+          fontSize: '9.375rem',
+          lineHeight: 'unset',
+          fontWeight: '900',
+        },
+        '.heading-title-tablet': {
+          fontFamily: theme('fontFamily.heading'),
+          fontSize: '6rem',
+          lineHeight: 'unset',
+          fontWeight: '900',
+        },
+        '.heading-1': {
+          fontFamily: theme('fontFamily.heading'),
+          fontSize: '4.5rem',
+          lineHeight: '4.5rem',
+          fontWeight: '900',
+        },
+        '.heading-2': {
+          fontFamily: theme('fontFamily.heading'),
+          fontSize: '2.5rem',
+          lineHeight: '3rem',
+          fontWeight: '900',
+        },
+        '.heading-3': {
+          fontFamily: theme('fontFamily.heading'),
+          fontSize: '2rem',
+          lineHeight: '2.25rem',
+          fontWeight: '900',
+        },
+        '.heading-4': {
+          fontFamily: theme('fontFamily.heading'),
+          fontSize: '1.5rem',
+          lineHeight: '2rem',
+          fontWeight: '900',
+        },
+      })
+      addUtilities({
+        '.grid-stack': {
+          display: 'grid',
+          'grid-template-areas': 'stack',
+        },
+        '.grid-stack > *': {
+          'grid-area': 'stack',
         },
       })
     }),

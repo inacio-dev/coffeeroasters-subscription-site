@@ -1,0 +1,11 @@
+---
+import { Image } from 'astro:assets'
+
+import logo from '../assets/shared/desktop/logo.svg'
+import hamburgerIcon from '../assets/shared/mobile/icon-hamburger.svg'
+---
+
+<header class="flex justify-between items-center container mx-auto px-6 mt-8">
+  <Image src={logo} alt="logo" width="163" height="18" />
+  <Image src={hamburgerIcon} alt="logo" />
+</header>

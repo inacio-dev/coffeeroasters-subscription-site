@@ -1,11 +1,22 @@
 ---
+import Header from '../components/Header.astro'
+import ChooseUs from '../components/home/ChooseUs.astro'
+import Collection from '../components/home/Collection.astro'
+import Hero from '../components/home/Hero.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Coffeeroasters subscription site">
-  Home About us Create your plan Great coffee made simple. Start your mornings with the world’s best
-  coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to
-  your door, at your schedule. Create your plan Our collection Gran Espresso Light and flavorful
+  <Header />
+
+  <div class="container mx-auto px-6 mt-10 w-full">
+    <Hero />
+    <Collection />
+    <ChooseUs />
+  </div>
+   Home About us Create your plan Great coffee made simple. Start your mornings with the world’s
+  best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly
+  to your door, at your schedule. Create your plan Our collection Gran Espresso Light and flavorful
   blend with cocoa and black pepper for an intense experience Planalto Brazilian dark roast with
   rich and velvety body, and hints of fruits and nuts Piccollo Mild and smooth blend featuring notes
   of toasted almond and dried cherry Danche Ethiopian hand-harvested blend densely packed with

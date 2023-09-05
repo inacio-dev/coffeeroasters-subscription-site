@@ -1,0 +1,31 @@
+---
+import { getImage } from 'astro:assets'
+
+import heroDesktop from '../../assets/about/desktop/image-hero-whitecup.jpg'
+import heroMobile from '../../assets/about/mobile/image-hero-whitecup.jpg'
+import heroTablet from '../../assets/about/tablet/image-hero-whitecup.jpg'
+
+const heroMobileOpt = await getImage({ src: heroMobile })
+const heroTabletOpt = await getImage({ src: heroTablet })
+const heroDesktopOpt = await getImage({ src: heroDesktop })
+---
+
+<div class="grid-stack rounded-[10px] overflow-hidden">
+  <picture>
+    <source media="(max-width: 767px)" srcset={heroMobileOpt.src} />
+    <source media="(min-width: 1100px)" srcset={heroDesktopOpt.src} />
+    <source media="(min-width: 768px)" srcset={heroTabletOpt.src} />
+    <img src={heroDesktopOpt.src} alt="" {...heroDesktopOpt.attributes} class="rounded-[10px]" />
+  </picture>
+
+  <div
+    class="flex flex-col justify-center items-center px-6 md:px-0 md:items-start text-center md:text-left md:pl-[85px]"
+  >
+    <h1 class="heading-2 lg:heading-1 text-light-cream max-w-[12ch]">About Us</h1>
+    <p class="text-light-cream opacity-80 mt-6 mb-10 lg:mb-14 max-w-[49ch]">
+      Coffeeroasters began its journey of exotic discovery in 1999, highlighting stories of coffee
+      from around the world. We have since been dedicated to bring the perfect cup - from bean to
+      brew - in every shipment.
+    </p>
+  </div>
+</div>

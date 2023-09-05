@@ -11,11 +11,11 @@ const heroDesktopOpt = await getImage({ src: heroDesktop })
 ---
 
 <div class="grid-stack rounded-[10px] overflow-hidden">
-  <picture>
+  <picture class="w-full">
     <source media="(max-width: 767px)" srcset={heroMobileOpt.src} />
     <source media="(min-width: 1100px)" srcset={heroDesktopOpt.src} />
     <source media="(min-width: 768px)" srcset={heroTabletOpt.src} />
-    <img src={heroDesktopOpt.src} alt="" {...heroDesktopOpt.attributes} />
+    <img src={heroDesktopOpt.src} alt="" {...heroDesktopOpt.attributes} class="w-full" />
   </picture>
   <div
     class="flex flex-col justify-center items-center md:items-start text-center md:text-left md:pl-[58px]"

@@ -1,18 +1,16 @@
 ---
-import Header from '../components/Header.astro'
 import ChooseUs from '../components/home/ChooseUs.astro'
 import Collection from '../components/home/Collection.astro'
 import Hero from '../components/home/Hero.astro'
+import HowWorks from '../components/home/HowWorks.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Coffeeroasters subscription site">
-  <Header />
-
-  <div class="container mx-auto px-6 md:px-10 mt-10 w-full">
+  <div class="container mx-auto w-full px-6 md:px-10 lg:px-0">
     <Hero />
     <Collection />
     <ChooseUs />
-    <h1>How it works</h1>
+    <HowWorks />
   </div>
 </Layout>

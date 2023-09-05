@@ -30,7 +30,12 @@ module.exports = {
   importOrderMergeDuplicateImports: true,
   importOrderCombineTypeAndValueImports: true,
   importOrderTypeScriptVersion: '5.0.0',
-  plugins: ['@ianvs/prettier-plugin-sort-imports', 'prettier-plugin-astro'],
+  plugins: [
+    '@ianvs/prettier-plugin-sort-imports',
+    'prettier-plugin-astro',
+    'prettier-plugin-organize-imports',
+    'prettier-plugin-tailwindcss',
+  ],
   overrides: [
     {
       files: '*.astro',

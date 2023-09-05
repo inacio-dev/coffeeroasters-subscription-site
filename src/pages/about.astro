@@ -1,5 +1,7 @@
 ---
+import Commitment from '../components/about/Commitment.astro'
 import Hero from '../components/about/Hero.astro'
+import Quality from '../components/about/Quality.astro'
 import Header from '../components/Header.astro'
 import Layout from '../layouts/Layout.astro'
 ---
@@ -7,7 +9,9 @@ import Layout from '../layouts/Layout.astro'
 <Layout title="Coffeeroasters subscription site">
   <Header />
 
-  <div class="px-6 md:px-10 lg:px-20 2xl:px-40 w-full grid">
+  <div class="w-full grid space-y-28 md:space-y-36 xl:space-y-40 justify-center items-start">
     <Hero />
+    <Commitment />
+    <Quality />
   </div>
 </Layout>

@@ -16,6 +16,7 @@ module.exports = {
         'pale-orange': 'hsl(25 94% 86%)',
         'light-cream': 'hsl(43 78% 98%)',
         grey: 'hsl(215 5% 54%)',
+        gunmetal: '#2C343E',
       },
     },
   },

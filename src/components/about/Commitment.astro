@@ -11,9 +11,9 @@ const heroDesktopOpt = await getImage({ src: heroDesktop })
 ---
 
 <section
-  class="grid grid-cols-1 md:grid-cols-2 space-y-12 md:space-y-0 mx-6 md:mx-10 lg:mx-20 2xl:mx-40"
+  class="grid grid-cols-1 md:grid-cols-2 space-y-12 md:space-y-0 mx-6 md:mx-10 lg:mx-20 2xl:mx-40 px-0 md:px-20"
 >
-  <div class="grid-stack pr-0 md:pr-[69px] 2xl:pr-0">
+  <div class="grid-stack justify-self-center md:justify-self-auto pr-0 md:pr-[69px] 2xl:pr-0">
     <picture>
       <source media="(max-width: 767px)" srcset={heroMobileOpt.src} />
       <source media="(min-width: 1100px)" srcset={heroDesktopOpt.src} />

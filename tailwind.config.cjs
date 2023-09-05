@@ -21,7 +21,7 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function({ theme, addBase, addUtilities }) {
+    plugin(function ({ theme, addBase, addUtilities }) {
       addBase({
         button: {
           width: '217px',

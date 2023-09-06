@@ -1,4 +1,5 @@
 ---
+import { Dialog } from '../components/Dialog.tsx'
 import ChooseUs from '../components/home/ChooseUs.astro'
 import Collection from '../components/home/Collection.astro'
 import Hero from '../components/home/Hero.astro'
@@ -8,6 +9,7 @@ import Layout from '../layouts/Layout.astro'
 
 <Layout title="Coffeeroasters subscription site">
   <div class="container mx-auto w-full px-6 md:px-10 lg:px-0">
+    <Dialog client:load />
     <Hero />
     <Collection />
     <ChooseUs />

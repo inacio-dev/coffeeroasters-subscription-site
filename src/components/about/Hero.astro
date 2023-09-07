@@ -10,12 +10,12 @@ const heroTabletOpt = await getImage({ src: heroTablet })
 const heroDesktopOpt = await getImage({ src: heroDesktop })
 ---
 
-<section class="mx-6 overflow-hidden rounded-[10px] grid-stack md:mx-10 lg:mx-20 2xl:mx-40">
-  <picture>
+<section class="overflow-hidden rounded-[10px] grid-stack">
+  <picture class="w-full">
     <source media="(max-width: 767px)" srcset={heroMobileOpt.src} />
     <source media="(min-width: 1100px)" srcset={heroDesktopOpt.src} />
     <source media="(min-width: 768px)" srcset={heroTabletOpt.src} />
-    <img src={heroDesktopOpt.src} alt="" {...heroDesktopOpt.attributes} class="rounded-[10px]" />
+    <img src={heroDesktopOpt.src} alt="" {...heroDesktopOpt.attributes} class="w-full" />
   </picture>
 
   <div

@@ -10,9 +10,7 @@ const heroTabletOpt = await getImage({ src: heroTablet })
 const heroDesktopOpt = await getImage({ src: heroDesktop })
 ---
 
-<section
-  class="mx-6 grid grid-cols-1 space-y-12 px-0 md:mx-10 md:grid-cols-2 md:space-y-0 md:px-20 lg:mx-20 2xl:mx-40"
->
+<section class="grid grid-cols-1 space-y-12 md:grid-cols-2 md:space-y-0 max-w-[1110px] mx-auto">
   <div class="justify-self-center pr-0 grid-stack md:justify-self-auto md:pr-[69px] 2xl:pr-0">
     <picture>
       <source media="(max-width: 767px)" srcset={heroMobileOpt.src} />

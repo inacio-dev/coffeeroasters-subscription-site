@@ -10,7 +10,7 @@ const heroTabletOpt = await getImage({ src: heroTablet })
 const heroDesktopOpt = await getImage({ src: heroDesktop })
 ---
 
-<div class="grid-stack rounded-[10px] overflow-hidden">
+<div class="overflow-hidden rounded-[10px] grid-stack">
   <picture class="w-full">
     <source media="(max-width: 767px)" srcset={heroMobileOpt.src} />
     <source media="(min-width: 1100px)" srcset={heroDesktopOpt.src} />
@@ -18,10 +18,10 @@ const heroDesktopOpt = await getImage({ src: heroDesktop })
     <img src={heroDesktopOpt.src} alt="" {...heroDesktopOpt.attributes} class="w-full" />
   </picture>
   <div
-    class="flex flex-col justify-center items-center md:items-start text-center md:text-left md:pl-[58px]"
+    class="flex flex-col items-center justify-center text-center md:items-start md:pl-[58px] md:text-left"
   >
-    <h1 class="heading-2 lg:heading-1 text-light-cream max-w-[12ch]">Great coffee made simple.</h1>
-    <p class="text-light-cream opacity-80 mt-6 mb-10 lg:mb-14 max-w-[49ch]">
+    <h1 class="max-w-[12ch] text-light-cream heading-2 lg:heading-1">Great coffee made simple.</h1>
+    <p class="mb-10 mt-6 max-w-[49ch] text-light-cream opacity-80 lg:mb-14">
       Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees
       from our best roasters delivered directly to your door, at your schedule.
     </p>

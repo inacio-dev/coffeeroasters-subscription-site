@@ -34,7 +34,6 @@ module.exports = {
     '@ianvs/prettier-plugin-sort-imports',
     'prettier-plugin-astro',
     'prettier-plugin-organize-imports',
-    'prettier-plugin-tailwindcss',
   ],
   overrides: [
     {

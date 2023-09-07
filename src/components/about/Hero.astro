@@ -10,7 +10,7 @@ const heroTabletOpt = await getImage({ src: heroTablet })
 const heroDesktopOpt = await getImage({ src: heroDesktop })
 ---
 
-<section class="grid-stack rounded-[10px] overflow-hidden mx-6 md:mx-10 lg:mx-20 2xl:mx-40">
+<section class="mx-6 overflow-hidden rounded-[10px] grid-stack md:mx-10 lg:mx-20 2xl:mx-40">
   <picture>
     <source media="(max-width: 767px)" srcset={heroMobileOpt.src} />
     <source media="(min-width: 1100px)" srcset={heroDesktopOpt.src} />
@@ -19,10 +19,10 @@ const heroDesktopOpt = await getImage({ src: heroDesktop })
   </picture>
 
   <div
-    class="flex flex-col justify-center items-center px-6 md:px-0 md:items-start text-center md:text-left md:pl-[85px]"
+    class="flex flex-col items-center justify-center px-6 text-center md:items-start md:px-0 md:pl-[85px] md:text-left"
   >
-    <h1 class="heading-2 text-light-cream max-w-[12ch]">About Us</h1>
-    <p class="text-light-cream mt-6 mb-10 lg:mb-14 max-w-[49ch]">
+    <h1 class="max-w-[12ch] text-light-cream heading-2">About Us</h1>
+    <p class="mb-10 mt-6 max-w-[49ch] text-light-cream lg:mb-14">
       Coffeeroasters began its journey of exotic discovery in 1999, highlighting stories of coffee
       from around the world. We have since been dedicated to bring the perfect cup - from bean to
       brew - in every shipment.

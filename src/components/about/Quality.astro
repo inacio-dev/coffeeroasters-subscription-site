@@ -11,10 +11,10 @@ const heroDesktopOpt = await getImage({ src: heroDesktop })
 ---
 
 <section
-  class="grid bg-gunmetal relative rounded-[10px] justify-center xl:justify-start max-w-none xl:max-w-[1280px] mx-6 md:mx-10 lg:mx-20 2xl:mx-40"
+  class="relative mx-6 grid max-w-none justify-center rounded-[10px] bg-gunmetal md:mx-10 lg:mx-20 xl:max-w-[1280px] xl:justify-start 2xl:mx-40"
 >
   <div
-    class="z-10 grid-stack absolute -top-[5%] sm:-top-[15%] md:-top-[5%] xl:-top-[88px] right-0 xl:right-[85px] left-[35%] xl:left-auto -translate-x-[25%] -translate-y-[25%] xl:translate-x-0 xl:translate-y-0"
+    class="absolute -top-[5%] left-[35%] right-0 z-10 -translate-x-[25%] -translate-y-[25%] grid-stack sm:-top-[15%] md:-top-[5%] xl:-top-[88px] xl:left-auto xl:right-[85px] xl:translate-x-0 xl:translate-y-0"
   >
     <picture>
       <source media="(max-width: 767px)" srcset={heroMobileOpt.src} />
@@ -25,10 +25,10 @@ const heroDesktopOpt = await getImage({ src: heroDesktop })
   </div>
 
   <div
-    class="max-w-none xl:max-w-[540px] xl:pl-[85px] xl:pr-0 px-6 md:px-[74px] xl:px-0 pt-[142px] md:pt-[224px] xl:pt-[85px] justify-center items-center xl:items-start text-center xl:text-left"
+    class="max-w-none items-center justify-center px-6 pt-[142px] text-center md:px-[74px] md:pt-[224px] xl:max-w-[540px] xl:items-start xl:px-0 xl:pl-[85px] xl:pr-0 xl:pt-[85px] xl:text-left"
   >
-    <h1 class="heading-3 md:heading-2 text-light-cream">Uncompromising quality</h1>
-    <p class="text-light-cream mt-8 mb-[60px] md:mb-[120px]">
+    <h1 class="text-light-cream heading-3 md:heading-2">Uncompromising quality</h1>
+    <p class="mb-[60px] mt-8 text-light-cream md:mb-[120px]">
       Although we work with growers who pay close attention to all stages of harvest and processing,
       we employ, on our end, a rigorous quality control program to avoid over-roasting or baking the
       coffee dry. Every bag of coffee is tagged with a roast date and batch number. Our goal is to

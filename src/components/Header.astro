@@ -6,15 +6,15 @@ import hamburgerIcon from '../assets/shared/mobile/icon-hamburger.svg'
 ---
 
 <header
-  class="flex w-full justify-between items-center mx-auto pt-8 md:pt-10 pb-10 md:pb-[53px] lg:py-[43px] px-6 md:px-10 lg:px-20 2xl:px-40"
+  class="mx-auto flex w-full items-center justify-between px-6 pb-10 pt-8 md:px-10 md:pb-[53px] md:pt-10 lg:px-20 lg:py-[43px] 2xl:px-40"
 >
   <Image src={logo} alt="logo" width="163" height="18" />
 
-  <Image src={hamburgerIcon} alt="logo" class="md:hidden block" />
+  <Image src={hamburgerIcon} alt="logo" class="block md:hidden" />
 
   <nav class="hidden md:block">
     <ul
-      class="flex flex-row justify-center items-center uppercase font-bold text-xs 2xl:text-sm space-x-8"
+      class="flex flex-row items-center justify-center space-x-8 text-xs font-bold uppercase 2xl:text-sm"
     >
       <li>
         <a href="/" class="text-grey transition-colors duration-300 hover:text-dark-grey-blue"

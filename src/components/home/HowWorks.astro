@@ -22,22 +22,22 @@ const steps = [
 ---
 
 <div class="lg:px-[85px]">
-  <h2 class="mt-[120px] mb-20 heading-4 text-grey text-center md:text-left">How it works</h2>
+  <h2 class="mb-20 mt-[120px] text-center text-grey heading-4 md:text-left">How it works</h2>
   <div
-    class="hidden md:flex max-w-[497px] lg:max-w-[760px] w-full justify-between items-center [&>*]:flex-1 mb-[67px]"
+    class="mb-[67px] hidden w-full max-w-[497px] items-center justify-between md:flex lg:max-w-[760px] [&>*]:flex-1"
   >
-    <div class="max-w-[31px] h-[31px] rounded-full border-2 border-dark-cyan"></div>
+    <div class="h-[31px] max-w-[31px] rounded-full border-2 border-dark-cyan"></div>
     <div class="h-[2px] bg-pale-orange"></div>
-    <div class="max-w-[31px] h-[31px] rounded-full border-2 border-dark-cyan"></div>
+    <div class="h-[31px] max-w-[31px] rounded-full border-2 border-dark-cyan"></div>
     <div class="h-[2px] bg-pale-orange"></div>
-    <div class="max-w-[31px] h-[31px] rounded-full border-2 border-dark-cyan"></div>
+    <div class="h-[31px] max-w-[31px] rounded-full border-2 border-dark-cyan"></div>
   </div>
-  <ol class="flex flex-col md:flex-row gap-14 md:gap-2.5 max-w-[1045px]">
+  <ol class="flex max-w-[1045px] flex-col gap-14 md:flex-row md:gap-2.5">
     {
       steps.map((step, index) => (
-        <li class="text-center md:text-left flex-1">
-          <span class="heading-1 text-pale-orange">0{index + 1}</span>
-          <p class="text-[28px] font-black font-heading leading-[32px] my-6 md:mt-[42px] md:mb-[38px] md:max-w-[159px]">
+        <li class="flex-1 text-center md:text-left">
+          <span class="text-pale-orange heading-1">0{index + 1}</span>
+          <p class="my-6 font-heading text-[28px] font-black leading-[32px] md:mb-[38px] md:mt-[42px] md:max-w-[159px]">
             {step.title}
           </p>
           <p class={`text-[15px] leading-[25px] ${step.descriptionClass}`}>{step.description}</p>

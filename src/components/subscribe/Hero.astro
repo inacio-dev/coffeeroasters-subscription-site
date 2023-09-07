@@ -1,9 +1,9 @@
 ---
 import { getImage } from 'astro:assets'
 
-import heroDesktop from '../../assets/home/desktop/image-hero-coffeepress.jpg'
-import heroMobile from '../../assets/home/mobile/image-hero-coffeepress.jpg'
-import heroTablet from '../../assets/home/tablet/image-hero-coffeepress.jpg'
+import heroDesktop from '../../assets/subscribe/desktop/image-hero-blackcup.jpg'
+import heroMobile from '../../assets/subscribe/mobile/image-hero-blackcup.jpg'
+import heroTablet from '../../assets/subscribe/tablet/image-hero-blackcup.jpg'
 
 const heroMobileOpt = await getImage({ src: heroMobile })
 const heroTabletOpt = await getImage({ src: heroTablet })
@@ -25,6 +25,5 @@ const heroDesktopOpt = await getImage({ src: heroDesktop })
       Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees
       from our best roasters delivered directly to your door, at your schedule.
     </p>
-    <a href="/subscribe" class="btn transition-colors">Create your plan</a>
   </div>
 </div>

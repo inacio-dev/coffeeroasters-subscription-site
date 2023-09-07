@@ -1,4 +1,5 @@
 import * as Accordion from '@radix-ui/react-accordion'
+import * as Dialog from '@radix-ui/react-dialog'
 import clsx from 'clsx'
 import { useState } from 'react'
 
@@ -94,6 +95,8 @@ export default function Chooses() {
     delivery: '',
   })
 
+  const isNonAllOptionsSelected = Object.values(selectedPlanOptions).some((option) => !option)
+
   const handlePlanOptionClick = (type: string, title: string) => {
     setSelectedPlanOptions((prevOptions) => ({ ...prevOptions, [type]: title }))
   }
@@ -125,6 +128,7 @@ export default function Chooses() {
       <div>
         <Accordion.Root
           type="multiple"
+          defaultValue={['drink']}
           className="flex flex-col gap-[96px] md:gap-[100px] lg:ml-auto lg:max-w-[730px] lg:gap-[88px]"
         >
           {Object.entries(planOptions).map(([key, { title, options }]) => (
@@ -160,7 +164,51 @@ export default function Chooses() {
           </p>
         </div>
         <div className="text-center lg:text-right">
-          <button className="mt-14 btn lg:mt-10">Create my plan</button>
+          <Dialog.Root>
+            <Dialog.Trigger disabled={isNonAllOptionsSelected} className="mt-14 btn lg:mt-10">
+              Create my plan
+            </Dialog.Trigger>
+            <Dialog.Portal>
+              <Dialog.Overlay className="fixed inset-0 grid place-items-center bg-black/40 px-6 py-[35px]">
+                <Dialog.Content className="h-full w-full overflow-hidden rounded-lg bg-light-cream data-[state=open]:animate-content-show md:h-auto md:w-[540px]">
+                  <div className="flex h-[88px] items-center bg-[#333D4B] px-6 text-white heading-4 md:h-[136px] md:px-14 md:heading-2">
+                    Order Summary
+                  </div>
+                  <div className="px-6 py-10 md:p-14">
+                    <p className="!leading-[40px] text-[#83888F] heading-4">
+                      “I drink my coffee as{' '}
+                      <span className="text-dark-cyan">{selectedPlanOptions.drink || '_____'}</span>
+                      , with a{' '}
+                      <span className="text-dark-cyan">
+                        {selectedPlanOptions['coffee-type'] || '_____'}
+                      </span>{' '}
+                      type of bean.{' '}
+                      <span className="text-dark-cyan">
+                        {selectedPlanOptions.quantity || '_____'}
+                      </span>{' '}
+                      ground ala{' '}
+                      <span className="text-dark-cyan">{selectedPlanOptions.grind || '_____'}</span>
+                      , sent to me{' '}
+                      <span className="text-dark-cyan">
+                        {selectedPlanOptions.delivery || '_____'}
+                      </span>
+                      .”
+                    </p>
+                    <p className="mt-2 text-[#333D4B]">
+                      Is this correct? You can proceed to checkout or go back to plan selection if
+                      something is off. Subscription discount codes can also be redeemed at the
+                      checkout.
+                    </p>
+                    <div className="mt-12 hidden items-center gap-[19px] md:flex">
+                      <p className="heading-3">$14.00/ mo</p>
+                      <button className="btn">Checkout</button>
+                    </div>
+                    <button className="mt-6 !w-full btn md:hidden">Checkout - $14.00 / mo</button>
+                  </div>
+                </Dialog.Content>
+              </Dialog.Overlay>
+            </Dialog.Portal>
+          </Dialog.Root>
         </div>
       </div>
     </div>

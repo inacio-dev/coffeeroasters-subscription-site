@@ -86,6 +86,29 @@ const planOptions = {
   delivery: { title: 'How often should we deliver?', options: deliveryOptions },
 } as const
 
+const options = [
+  {
+    label: 'Preferences',
+    value: 'drink',
+  },
+  {
+    label: 'Bean Type',
+    value: 'coffee-type',
+  },
+  {
+    label: 'Quantity',
+    value: 'quantity',
+  },
+  {
+    label: 'Grind Option',
+    value: 'grind',
+  },
+  {
+    label: 'Deliveries',
+    value: 'delivery',
+  },
+]
+
 export default function Chooses() {
   const [selectedPlanOptions, setSelectedPlanOptions] = useState({
     drink: '',
@@ -94,6 +117,8 @@ export default function Chooses() {
     grind: '',
     delivery: '',
   })
+
+  const [values, setValues] = useState(['drink'])
 
   const isNonAllOptionsSelected = Object.values(selectedPlanOptions).some((option) => !option)
 
@@ -104,31 +129,33 @@ export default function Chooses() {
   return (
     <section className="mt-[120px] flex justify-between md:mt-[144px] lg:mx-auto lg:mt-[168px] lg:max-w-[1110px]">
       <ol className="hidden divide-y lg:block">
-        <li className="flex gap-[25px] py-6 heading-4">
-          <span className="text-dark-cyan">01</span>
-          Preferences
-        </li>
-        <li className="flex gap-[25px] py-6 heading-4">
-          <span className="text-dark-cyan">02</span>
-          Bean Type
-        </li>
-        <li className="flex gap-[25px] py-6 heading-4">
-          <span className="text-dark-cyan">03</span>
-          Quantity
-        </li>
-        <li className="flex gap-[25px] py-6 heading-4">
-          <span className="text-dark-cyan">04</span>
-          Grind Option
-        </li>
-        <li className="flex gap-[25px] py-6 heading-4">
-          <span className="text-dark-cyan">05</span>
-          <span>Deliveries</span>
-        </li>
+        {options.map((option, index) => (
+          <li key={index} className="flex gap-[25px] py-6 heading-4">
+            <span
+              className={clsx(
+                selectedPlanOptions[option.value] ? 'text-dark-cyan' : 'text-grey',
+                !values.includes(option.value) && 'text-opacity-40',
+              )}
+            >
+              0{index + 1}
+            </span>
+            <span
+              className={clsx(
+                'text-dark-grey-blue',
+                !values.includes(option.value) && 'text-opacity-40',
+              )}
+            >
+              {option.label}
+            </span>
+          </li>
+        ))}
       </ol>
+
       <div>
         <Accordion.Root
           type="multiple"
-          defaultValue={['drink']}
+          value={values}
+          onValueChange={setValues}
           className="flex flex-col gap-[96px] md:gap-[100px] lg:ml-auto lg:max-w-[730px] lg:gap-[88px]"
         >
           {Object.entries(planOptions).map(([key, { title, options }]) => (
@@ -201,9 +228,11 @@ export default function Chooses() {
                     </p>
                     <div className="mt-12 hidden items-center gap-[19px] md:flex">
                       <p className="heading-3">$14.00/ mo</p>
-                      <button className="btn">Checkout</button>
+                      <Dialog.Close className="btn">Checkout</Dialog.Close>
                     </div>
-                    <button className="mt-6 !w-full btn md:hidden">Checkout - $14.00 / mo</button>
+                    <Dialog.Close className="mt-6 !w-full btn md:hidden">
+                      Checkout - $14.00 / mo
+                    </Dialog.Close>
                   </div>
                 </Dialog.Content>
               </Dialog.Overlay>

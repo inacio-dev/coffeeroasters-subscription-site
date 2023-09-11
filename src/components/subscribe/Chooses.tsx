@@ -133,7 +133,9 @@ export default function Chooses() {
           <li key={index} className="flex gap-[25px] py-6 heading-4">
             <span
               className={clsx(
-                selectedPlanOptions[option.value] ? 'text-dark-cyan' : 'text-grey',
+                selectedPlanOptions[option.value as keyof typeof selectedPlanOptions]
+                  ? 'text-dark-cyan'
+                  : 'text-grey',
                 !values.includes(option.value) && 'text-opacity-40',
               )}
             >
@@ -197,7 +199,7 @@ export default function Chooses() {
             </Dialog.Trigger>
             <Dialog.Portal>
               <Dialog.Overlay className="fixed inset-0 grid place-items-center bg-black/40 px-6 py-[35px]">
-                <Dialog.Content className="h-full w-full overflow-hidden rounded-lg bg-light-cream data-[state=open]:animate-content-show md:h-auto md:w-[540px]">
+                <Dialog.Content className="h-fit w-full overflow-hidden rounded-lg bg-light-cream data-[state=open]:animate-content-show md:h-auto md:w-[540px] lg:h-full">
                   <div className="flex h-[88px] items-center bg-[#333D4B] px-6 text-white heading-4 md:h-[136px] md:px-14 md:heading-2">
                     Order Summary
                   </div>

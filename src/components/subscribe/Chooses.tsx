@@ -102,7 +102,7 @@ export default function Chooses() {
   }
 
   return (
-    <div className="mt-[120px] flex justify-between md:mt-[144px] lg:mx-auto lg:mt-[168px] lg:max-w-[1110px]">
+    <section className="mt-[120px] flex justify-between md:mt-[144px] lg:mx-auto lg:mt-[168px] lg:max-w-[1110px]">
       <ol className="hidden divide-y lg:block">
         <li className="flex gap-[25px] py-6 heading-4">
           <span className="text-dark-cyan">01</span>
@@ -211,7 +211,7 @@ export default function Chooses() {
           </Dialog.Root>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

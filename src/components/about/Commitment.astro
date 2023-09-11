@@ -5,9 +5,9 @@ import heroDesktop from '../../assets/about/desktop/image-commitment.jpg'
 import heroMobile from '../../assets/about/mobile/image-commitment.jpg'
 import heroTablet from '../../assets/about/tablet/image-commitment.jpg'
 
-const heroMobileOpt = await getImage({ src: heroMobile })
-const heroTabletOpt = await getImage({ src: heroTablet })
-const heroDesktopOpt = await getImage({ src: heroDesktop })
+const heroMobileOpt = await getImage({ src: heroMobile, format: 'avif' })
+const heroTabletOpt = await getImage({ src: heroTablet, format: 'avif' })
+const heroDesktopOpt = await getImage({ src: heroDesktop, format: 'avif' })
 ---
 
 <section class="grid grid-cols-1 space-y-12 md:grid-cols-2 md:space-y-0 max-w-[1110px] mx-auto">

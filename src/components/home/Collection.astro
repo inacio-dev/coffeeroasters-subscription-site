@@ -7,7 +7,7 @@ import piccolloImage from '../../assets/home/desktop/image-piccollo.png'
 import planaltoImage from '../../assets/home/desktop/image-planalto.png'
 ---
 
-<div class="mx-auto pb-[120px] pt-[136px] lg:max-w-[1111px] lg:pb-[200px]">
+<section class="mx-auto pb-[120px] pt-[136px] lg:max-w-[1111px] lg:pb-[200px]">
   <h2
     class="mb-10 bg-[linear-gradient(180deg,hsl(215_19%_25%/0.6)_0%,hsl(43_78%_98%/0)_100%)] text-center heading-2 md:-mb-14 md:heading-title-tablet lg:-mb-24 lg:bg-[linear-gradient(180deg,hsl(215_19%_25%/0.4)_0%,hsl(43_78%_98%/0)_80%)] lg:heading-title"
     style={{
@@ -23,9 +23,11 @@ import planaltoImage from '../../assets/home/desktop/image-planalto.png'
         class="flex flex-1 flex-col items-center text-center md:flex-row md:text-left lg:flex-col lg:gap-[70px] lg:text-center"
       >
         <Image
+          format="avif"
           src={granEspressoImage}
           alt=""
-          class="h-[151px] w-[200px] md:h-[193px] md:w-[255px]"
+          sizes="(min-width: 1024px) 255px, 200px"
+          class="w-[200px] md:w-[255px] h-auto"
         />
         <div class="flex flex-col gap-4 md:gap-6">
           <h3 class="heading-4">Gran Espresso</h3>
@@ -37,7 +39,13 @@ import planaltoImage from '../../assets/home/desktop/image-planalto.png'
       <li
         class="flex flex-1 flex-col items-center text-center md:flex-row md:text-left lg:flex-col lg:gap-[70px] lg:text-center"
       >
-        <Image src={planaltoImage} alt="" class="h-[151px] w-[200px] md:h-[193px] md:w-[255px]" />
+        <Image
+          format="avif"
+          src={planaltoImage}
+          alt=""
+          sizes="(min-width: 1024px) 255px, 200px"
+          class="w-[200px] md:w-[255px] h-auto"
+        />
         <div class="flex flex-col gap-4 md:gap-6">
           <h3 class="heading-4">Planalto</h3>
           <p class="max-w-[282px]">
@@ -48,7 +56,13 @@ import planaltoImage from '../../assets/home/desktop/image-planalto.png'
       <li
         class="flex flex-1 flex-col items-center text-center md:flex-row md:text-left lg:flex-col lg:gap-[70px] lg:text-center"
       >
-        <Image src={piccolloImage} alt="" class="h-[151px] w-[200px] md:h-[193px] md:w-[255px]" />
+        <Image
+          format="avif"
+          src={piccolloImage}
+          alt=""
+          sizes="(min-width: 1024px) 255px, 200px"
+          class="w-[200px] md:w-[255px] h-auto"
+        />
         <div class="flex flex-col gap-4 md:gap-6">
           <h3 class="heading-4">Piccollo</h3>
           <p class="max-w-[282px] lg:max-w-[261px]">
@@ -59,7 +73,13 @@ import planaltoImage from '../../assets/home/desktop/image-planalto.png'
       <li
         class="flex flex-1 flex-col items-center text-center md:flex-row md:text-left lg:flex-col lg:gap-[70px] lg:text-center"
       >
-        <Image src={dancheImage} alt="" class="h-[151px] w-[200px] md:h-[193px] md:w-[255px]" />
+        <Image
+          format="avif"
+          src={dancheImage}
+          alt=""
+          sizes="(min-width: 1024px) 255px, 200px"
+          class="w-[200px] md:w-[255px] h-auto"
+        />
         <div class="flex flex-col gap-4 md:gap-6">
           <h3 class="heading-4">Danche</h3>
           <p class="max-w-[282px] lg:max-w-[267px]">
@@ -69,4 +89,4 @@ import planaltoImage from '../../assets/home/desktop/image-planalto.png'
       </li>
     </ul>
   </div>
-</div>
+</section>

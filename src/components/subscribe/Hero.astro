@@ -5,17 +5,39 @@ import heroDesktop from '../../assets/subscribe/desktop/image-hero-blackcup.jpg'
 import heroMobile from '../../assets/subscribe/mobile/image-hero-blackcup.jpg'
 import heroTablet from '../../assets/subscribe/tablet/image-hero-blackcup.jpg'
 
-const heroMobileOpt = await getImage({ src: heroMobile })
-const heroTabletOpt = await getImage({ src: heroTablet })
-const heroDesktopOpt = await getImage({ src: heroDesktop })
+const heroMobileOpt = await getImage({ src: heroMobile, format: 'avif', quality: 'low' })
+const heroTabletOpt = await getImage({ src: heroTablet, format: 'avif', quality: 'low' })
+const heroDesktopOpt = await getImage({ src: heroDesktop, format: 'avif' })
 ---
 
-<div class="overflow-hidden rounded-[10px] grid-stack">
+<main class="overflow-hidden rounded-[10px] grid-stack">
   <picture class="w-full">
-    <source media="(max-width: 767px)" srcset={heroMobileOpt.src} />
-    <source media="(min-width: 1100px)" srcset={heroDesktopOpt.src} />
-    <source media="(min-width: 768px)" srcset={heroTabletOpt.src} />
-    <img src={heroDesktopOpt.src} alt="" {...heroDesktopOpt.attributes} class="w-full" />
+    <source
+      media="(max-width: 767px)"
+      srcset={heroMobileOpt.src}
+      width={heroMobileOpt.attributes.width}
+      height={heroMobileOpt.attributes.height}
+    />
+    <source
+      media="(min-width: 1100px)"
+      srcset={heroDesktopOpt.src}
+      width={heroDesktopOpt.attributes.width}
+      height={heroDesktopOpt.attributes.height}
+    />
+    <source
+      media="(min-width: 768px)"
+      srcset={heroTabletOpt.src}
+      width={heroTabletOpt.attributes.width}
+      height={heroTabletOpt.attributes.height}
+    />
+    <img
+      src={heroDesktopOpt.src}
+      alt=""
+      width={heroDesktopOpt.attributes.width}
+      height={heroDesktopOpt.attributes.height}
+      loading="eager"
+      fetchpriority="high"
+    />
   </picture>
   <div
     class="flex flex-col items-center justify-center text-center md:items-start md:pl-[58px] md:text-left"
@@ -26,4 +48,4 @@ const heroDesktopOpt = await getImage({ src: heroDesktop })
       from our best roasters delivered directly to your door, at your schedule.
     </p>
   </div>
-</div>
+</main>

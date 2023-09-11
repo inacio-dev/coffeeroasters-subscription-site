@@ -5,9 +5,9 @@ import heroDesktop from '../../assets/about/desktop/image-quality.jpg'
 import heroMobile from '../../assets/about/mobile/image-quality.jpg'
 import heroTablet from '../../assets/about/tablet/image-quality.jpg'
 
-const heroMobileOpt = await getImage({ src: heroMobile })
-const heroTabletOpt = await getImage({ src: heroTablet })
-const heroDesktopOpt = await getImage({ src: heroDesktop })
+const heroMobileOpt = await getImage({ src: heroMobile, format: 'avif' })
+const heroTabletOpt = await getImage({ src: heroTablet, format: 'avif' })
+const heroDesktopOpt = await getImage({ src: heroDesktop, format: 'avif' })
 ---
 
 <section
@@ -17,7 +17,6 @@ const heroDesktopOpt = await getImage({ src: heroDesktop })
     class="absolute -top-[5%] left-[35%] right-0 z-10 -translate-x-[25%] -translate-y-[25%] grid-stack sm:-top-[15%] md:-top-[5%] xl:-top-[88px] xl:left-auto xl:right-[85px] xl:translate-x-0 xl:translate-y-0"
   >
     <picture>
-      
       <source media="(max-width: 767px)" srcset={heroMobileOpt.src} />
       <source media="(min-width: 1280px)" srcset={heroDesktopOpt.src} />
       <source media="(min-width: 768px)" srcset={heroTabletOpt.src} />

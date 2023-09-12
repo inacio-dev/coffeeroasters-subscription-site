@@ -8,6 +8,7 @@ This repository contains the implementation of a functional coffee subscription 
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Using Astro](#using-astro)
+- [Code Formatting](#code-formatting)
 - [Want to learn more?](#want-to-learn-more)
 - [Contribution](#contribution)
 - [Author](#author)
@@ -59,16 +60,17 @@ The site will be available at [http://localhost:4321](http://localhost:4321/).
 
 Inside your Astro project, you'll see the following folders and files:
 
-   ```bash
-      /
-      ├── public/
-      ├── src/
-      │ ├── assets/
-      │ ├── components/
-      │ ├── layouts/
-      │ └── pages/
-      └── package.json
-   ```
+```bash
+   /
+   ├── public/
+   ├── src/
+   │ ├── assets/
+   │ ├── components/
+   │ ├── layouts/
+   │ └── pages/
+   └── package.json
+```
+
 Astro looks for .astro or .md files in the src/pages/ directory. Each page is exposed as a route based on its file name.
 
 There's nothing special about src/components/, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
@@ -106,6 +108,22 @@ Your Astro project will be available at http://localhost:3000.
    ```
 
 5. For more information and advanced usage of Astro, refer to the [Astro documentation](https://docs.astro.build/).
+
+## Code Formatting
+
+We use Prettier and ESLint for code formatting in this project to ensure consistent and clean code. You can format your code using the following commands:
+
+- Format all JavaScript and TypeScript files:
+
+  ```bash
+     npm run format
+  ```
+
+- Check for code formatting issues:
+
+  ```bash
+     npm run lint
+  ```
 
 ## Contribution
 

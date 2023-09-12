@@ -113,10 +113,10 @@ You can contribute to this project by opening issues, suggesting improvements, o
 
 ## Author
 
-- GitHub: [Inácio Rodrigues](@inacio-dev)
+- GitHub: [Inácio Rodrigues](https://github.com/inacio-dev)
 - Email: inaciormgalvao@gmail.com
 - Website: [Portfolio](https://inacio-rodrigues.vercel.app/en)
 
 ## Acknowledgments
 
-This project benefited from the contributions of [João Pedro Magalhães](@joaom00), who participated as a member of the [GitHub organization](@inacio-teams).
+This project benefited from the contributions of [João Pedro Magalhães](https://github.com/joaom00), who participated as a member of the [GitHub organization](https://github.com/inacio-teams).

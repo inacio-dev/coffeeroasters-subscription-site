@@ -27,5 +27,17 @@ Follow the steps below to set up and run the project on your local environment:
 
 1. Clone this repository:
 
-```bash
+      ```bash
    git clone https://github.com/inacio-dev/coffeeroasters-subscription-site.git
+
+2. Navigate to the project directory:
+
+      ```bash
+   cd coffeeroasters-subscription-site
+
+3. Install dependencies using one of the following package managers (choose one):
+
+      ```bash
+   npm install
+   yarn install
+   pnpm install

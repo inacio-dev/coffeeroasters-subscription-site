@@ -5,6 +5,7 @@ This repository contains the implementation of a functional coffee subscription 
 ## Table of contents
 
 - [Technologies Used](#technologies-used)
+- [Deploy on Vercel](#deploy-on-vercel)
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Using Astro](#using-astro)
@@ -21,6 +22,8 @@ This repository contains the implementation of a functional coffee subscription 
 - Tailwind CSS
 - Astro
 - TypeScript
+- EsLint
+- Prettier
 
 ## Getting Started
 
@@ -55,6 +58,10 @@ Follow the steps below to set up and run the project on your local environment:
    ```
 
 The site will be available at [http://localhost:4321](http://localhost:4321/).
+
+## Deploy on Vercel
+
+This project is deployed on Vercel. You can access the live site at [Vercel deploy](https://in-dev-coffeeroasters-subscription-site.vercel.app/).
 
 ## Project Structure
 
@@ -124,6 +131,12 @@ We use Prettier and ESLint for code formatting in this project to ensure consist
   ```bash
      npm run lint
   ```
+
+## Want to learn more?
+
+During this project, I learned how to work with a new framework called Astro. Additionally, I gained experience in managing images using the features provided by the Astro framework. It was a valuable learning experience that expanded my skillset as a developer.
+
+I also learned how to optimize images using art direction, which allowed me to deliver a better user experience by serving different image versions based on the user's device and screen size.
 
 ## Contribution
 
